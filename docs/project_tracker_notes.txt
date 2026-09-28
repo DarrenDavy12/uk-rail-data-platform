@@ -1,0 +1,50 @@
+Project Tracker to-do list: 
+
+Day 1
+✓ Project setup
+✓ Virtual environment
+✓ API connection
+✓ Raw JSON extraction
+
+Day 2
+✓ Understand API structure
+✓ JSON → DataFrame
+✓ Bronze transformation
+✓ Bronze → Parquet
+✓ Schema inspection
+✓ Data-quality validation
+
+extract → transform → validate → orchestrate with main()
+That's much closer to how actual ETL scripts are structured.
+
+Next → Day 3
+
+terraform 
+        ↓
+S3 Bronze storage
+        ↓
+Snowpipe
+        ↓
+Snowflake RAW
+
+
+
+
+
+
+
+
+Day 1: Requirements + architecture
+Day 2: API extraction
+Day 3: JSON validation/cleaning
+Day 4: Bronze Parquet
+Day 5: S3 ingestion
+Day 6: Snowflake RAW
+Day 7: Snowpipe
+Day 8: Streams
+Day 9: dbt setup
+Day 10: Silver models
+Day 11: Gold/star schema
+Day 12: Tasks
+Day 13: Data quality/testing
+Day 14: BI dashboard + README + architecture diagram

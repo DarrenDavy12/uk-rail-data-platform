@@ -1,0 +1,42 @@
+         
+         
+         
+          UK Rail Public Data
+                  │
+                  ▼
+             Python ETL
+                  │
+                  ▼
+           Bronze Parquet
+                  │
+                  ▼
+               AWS S3
+                  │
+                  ▼
+             Snowpipe
+                  │
+                  ▼
+          Snowflake RAW
+                  │
+             ┌────┴────┐
+             ▼         ▼
+          Streams   RAW data
+             │         │
+             └────┬────┘
+                  ▼
+              Snowpark
+               Python
+                  │
+                  ▼
+                dbt
+                  │
+           ┌──────┴──────┐
+           ▼             ▼
+        SILVER          GOLD
+           │             │
+           └──────┬──────┘
+                  ▼
+          Snowflake Tasks
+                  │
+                  ▼
+             Power BI
