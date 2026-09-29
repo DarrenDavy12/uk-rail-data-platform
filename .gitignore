@@ -5,3 +5,7 @@ __pycache__/
 *.tfstate
 *.tfstate.*
 terraform.tfvars
+data/raw/*
+data/bronze/*
+!data/raw/.gitkeep
+!data/bronze/.gitkeep
