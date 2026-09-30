@@ -14,20 +14,25 @@
 - [x] Local Bronze → S3 upload
 - [x] boto3 S3 upload automation
 - [x] Snowflake database and RAW schema
-- [x] Snowflake RAW table - Snowflake appropriate data types - light transformations 
+- [x] Snowflake RAW table - Snowflake appropriate data types for bronze parquet - light transformations 
 - [x] Snowflake storage integration - The clean approach is to use a Snowflake storage integration + AWS IAM role, rather than putting AWS access keys inside Snowflake.
 - [x] Snowflake external stage
-- [x] S3 → Snowflake connectivity verified
+- [x] S3 → Snowflake connectivity verified - Snowflake can see Parquet
+- [x] S3 → Snowflake RAW ingestion - using COPY INTO command to load the Parquet into RAW (Batch 1)
+- [x] Snowpipe - automation -> to detent new files and automatically loads them (Batch 2)
+                                                                                                        Batch 1 → 5 rows
+                                                                                                        Batch 2 → 5 rows
+                                                                                                                    ↓
+                                                                                                                10 rows in RAW
 
 ### In Progress
 
-- [ ] S3 → Snowflake RAW ingestion
-- [ ] Snowpipe
 - [ ] Snowflake Streams
 - [ ] Snowpark transformations
 - [ ] dbt Silver/Gold models
 - [ ] Snowflake Tasks
 - [ ] Power BI
+
 
 ### Architecture
 
