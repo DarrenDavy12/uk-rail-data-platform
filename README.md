@@ -26,9 +26,7 @@
                     ↓
             10 rows in RAW
 
-### In Progress
-
-- [ ] Snowflake Streams -> track chnages and only new records coming in from api when extracing:
+- [x] Snowflake Streams -> track chnages and only new records coming in from api when extracing:
 
         Batch 1 → RAW -> 5 rows 
         Batch 2 → RAW -> 10 rows 
@@ -40,6 +38,9 @@
                 STREAM
                     ↓
                 detects Batch 3
+
+### In Progress
+
 
 
 - [ ] Snowpark transformations
