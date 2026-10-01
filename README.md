@@ -27,7 +27,20 @@
 
 ### In Progress
 
-- [ ] Snowflake Streams
+- [ ] Snowflake Streams -> track chnages and only new records coming in from api when extracing:
+                        Batch 1 → RAW -> 5 rows 
+                        Batch 2 → RAW -> 10 rows 
+
+                        CREATE STREAM
+
+                        Batch 3 → RAW -> 15 rows
+                                ↓
+                            STREAM
+                                ↓
+                            detects Batch 3
+
+
+
 - [ ] Snowpark transformations
 - [ ] dbt Silver/Gold models
 - [ ] Snowflake Tasks
