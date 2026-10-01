@@ -20,25 +20,26 @@
 - [x] S3 → Snowflake connectivity verified - Snowflake can see Parquet
 - [x] S3 → Snowflake RAW ingestion - using COPY INTO command to load the Parquet into RAW (Batch 1)
 - [x] Snowpipe - automation -> to detent new files and automatically loads them (Batch 2)
-                                                                                                        Batch 1 → 5 rows
-                                                                                                        Batch 2 → 5 rows
-                                                                                                                    ↓
-                                                                                                                10 rows in RAW
+
+            Batch 1 → 5 rows
+            Batch 2 → 5 rows
+                    ↓
+            10 rows in RAW
 
 ### In Progress
 
 - [ ] Snowflake Streams -> track chnages and only new records coming in from api when extracing:
-                        Batch 1 → RAW -> 5 rows 
-                        Batch 2 → RAW -> 10 rows 
 
-                        CREATE STREAM
+        Batch 1 → RAW -> 5 rows 
+        Batch 2 → RAW -> 10 rows 
 
-                        Batch 3 → RAW -> 15 rows
-                                ↓
-                            STREAM
-                                ↓
-                            detects Batch 3
+        CREATE STREAM
 
+        Batch 3 → RAW -> 15 rows
+                    ↓
+                STREAM
+                    ↓
+                detects Batch 3
 
 
 - [ ] Snowpark transformations
