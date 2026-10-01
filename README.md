@@ -19,14 +19,14 @@
 - [x] Snowflake external stage
 - [x] S3 → Snowflake connectivity verified - Snowflake can see Parquet
 - [x] S3 → Snowflake RAW ingestion - using COPY INTO command to load the Parquet into RAW (Batch 1)
-- [x] Snowpipe - automation -> to detent new files and automatically loads them (Batch 2)
+- [x] Snowpipe - gets new data into Snowflake (automation) -> to detent new files and automatically loads them (Batch 2)
 
             Batch 1 → 5 rows
             Batch 2 → 5 rows
                     ↓
             10 rows in RAW
 
-- [x] Snowflake Streams -> track chnages and only new records coming in from api when extracing:
+- [x] Snowflake Streams - identifies what changed -> track chnages and only new records coming in from api when extracing:
 
         Batch 1 → RAW -> 5 rows 
         Batch 2 → RAW -> 10 rows 
@@ -43,10 +43,10 @@
 
 
 
-- [ ] Snowpark transformations
-- [ ] dbt Silver/Gold models
-- [ ] Snowflake Tasks
-- [ ] Power BI
+- [ ] Snowpark transformations - Python transformations inside Snowflake 
+- [ ] dbt Silver/Gold models - SQL-based data modelling
+- [ ] Snowflake Tasks - automate the pipeline
+- [ ] Power BI - connect to BI -> analysis for downtream consumption 
 
 
 ### Architecture
