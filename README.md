@@ -46,7 +46,7 @@
 - [ ] Snowpark transformations - Python transformations inside Snowflake 
 - [ ] dbt Silver/Gold models - SQL-based data modelling
 - [ ] Snowflake Tasks - automate the pipeline
-- [ ] Power BI - connect to BI -> analysis for downtream consumption 
+- [ ] Power BI - connect to BI -> analysis for downstream consumption 
 
 
 ### Architecture
