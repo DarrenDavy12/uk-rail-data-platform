@@ -25,7 +25,7 @@
              └────┬────┘
                   ▼
               Snowpark
-               Python
+            Python/SILVER 
                   │
                   ▼
                 dbt

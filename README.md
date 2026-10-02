@@ -39,11 +39,30 @@
                     ↓
                 detects Batch 3
 
+- [x] Snowpark transformations - Python transformations inside Snowflake
+
+        RAW       = 15 rows
+        STREAM    = 5 new rows
+        SILVER    = 5 processed rows
+        
+
+The Python code executed inside Snowflake's environment:
+
+        Your laptop
+            │
+            │ SQL
+            ▼
+        Snowflake
+            │
+            ├── Stream
+            │
+            └── Snowpark Python
+                    ↓
+                  Silver
+
+
 ### In Progress
 
-
-
-- [ ] Snowpark transformations - Python transformations inside Snowflake 
 - [ ] dbt Silver/Gold models - SQL-based data modelling
 - [ ] Snowflake Tasks - automate the pipeline
 - [ ] Power BI - connect to BI -> analysis for downstream consumption 
