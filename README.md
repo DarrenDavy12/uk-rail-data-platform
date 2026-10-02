@@ -49,7 +49,7 @@
 
 The Python code executed inside Snowflake's environment:
 
-        Your laptop
+        Local Machine
             │
             │ SQL
             ▼
