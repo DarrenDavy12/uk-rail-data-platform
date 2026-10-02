@@ -46,7 +46,8 @@
         SILVER    = 5 processed rows
         
 
-        The Python code executed inside Snowflake's environment:
+
+The Python code executed inside Snowflake's environment:
 
         Your laptop
             │
