@@ -14,7 +14,7 @@
 - [x] Local Bronze → S3 upload
 - [x] boto3 S3 upload automation
 - [x] Snowflake database and RAW schema
-- [x] Snowflake RAW table - Snowflake appropriate data types for bronze parquet - light transformations 
+- [x] Snowflake RAW table - Snowflake appropriate data types for bronze parquet - light transformations
 - [x] Snowflake storage integration - The clean approach is to use a Snowflake storage integration + AWS IAM role, rather than putting AWS access keys inside Snowflake.
 - [x] Snowflake external stage
 - [x] S3 → Snowflake connectivity verified - Snowflake can see Parquet
@@ -26,7 +26,7 @@
                     ↓
             10 rows in RAW
 
-- [x] Snowflake Streams - identifies what changed -> track chnages and only new records coming in from api when extracing:
+- [x] Snowflake Streams - identifies what changed -> track changes and only new records coming in from api when extracting:
 
         Batch 1 → RAW -> 5 rows 
         Batch 2 → RAW -> 10 rows 
