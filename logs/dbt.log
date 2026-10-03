@@ -1,0 +1,185 @@
+[0m15:55:38.586100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b5e510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b78c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b79890>]}
+
+
+============================== 15:55:38.588887 | 58b236d7-ced6-4639-af3a-4b528d07c222 ==============================
+[0m15:55:38.588887 [info ] [MainThread]: Running with dbt=1.12.5
+[0m15:55:38.589228 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'debug': 'False', 'partial_parse': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'profiles_dir': '/Users/darrendavy/.dbt', 'printer_width': '80', 'no_print': 'None', 'invocation_command': 'dbt init dbt', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'hints_enabled': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_format': 'default', 'log_path': 'logs', 'empty': 'None', 'warn_error': 'None', 'static_parser': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'quiet': 'False'}
+[0m15:55:46.483002 [debug] [MainThread]: Starter project path: /Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m15:55:46.494694 [info ] [MainThread]: Setting up your profile.
+[0m15:56:14.283219 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m15:56:14.283673 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m15:56:14.283862 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m16:03:21.824806 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m16:03:21.846343 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/click/termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/click/termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:03:21.916711 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 463.37045, "process_in_blocks": "0", "process_kernel_time": 0.368102, "process_mem_max_rss": "203718656", "process_out_blocks": "0", "process_user_time": 1.112205}
+[0m16:03:21.918692 [debug] [MainThread]: Command `dbt init` failed at 16:03:21.918577 after 463.37 seconds
+[0m16:03:21.919842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b87e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1209dc890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105a73690>]}
+[0m16:03:21.922217 [debug] [MainThread]: Flushing usage events
+[0m16:03:22.592519 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:03:25.377188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11165e610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116789d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111679650>]}
+
+
+============================== 16:03:25.379946 | b6cf77a5-a884-4584-b7c1-5fda2f4356e0 ==============================
+[0m16:03:25.379946 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:03:25.380283 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'write_json': 'True', 'log_path': 'logs', 'empty': 'None', 'cache_selected_only': 'False', 'printer_width': '80', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/darrendavy/.dbt', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'invocation_command': 'dbt init dbt', 'debug': 'False', 'static_parser': 'True'}
+[0m16:03:37.239475 [info ] [MainThread]: A project called rail_dbt already exists here.
+[0m16:03:37.247960 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 11.894084, "process_in_blocks": "0", "process_kernel_time": 0.155327, "process_mem_max_rss": "114589696", "process_out_blocks": "0", "process_user_time": 0.673647}
+[0m16:03:37.249166 [debug] [MainThread]: Command `dbt init` succeeded at 16:03:37.248941 after 11.90 seconds
+[0m16:03:37.249928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111651a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111687d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115a1f50>]}
+[0m16:03:37.250579 [debug] [MainThread]: Flushing usage events
+[0m16:03:37.722027 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:14:31.956575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10975d650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109778850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097794d0>]}
+
+
+============================== 16:14:31.959522 | 6ede4abf-63a7-46e6-827c-39cb1d32c22a ==============================
+[0m16:14:31.959522 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:14:31.959868 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/darrendavy/.dbt', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'introspect': 'True', 'write_json': 'True', 'empty': 'None', 'use_colors': 'True', 'invocation_command': 'dbt init dbt', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'log_path': 'logs', 'version_check': 'True', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_cache_events': 'False', 'quiet': 'False'}
+[0m16:14:37.417835 [info ] [MainThread]: A project called rail_dbt already exists here.
+[0m16:14:37.425744 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 5.4968963, "process_in_blocks": "0", "process_kernel_time": 0.156459, "process_mem_max_rss": "113967104", "process_out_blocks": "0", "process_user_time": 0.672286}
+[0m16:14:37.426709 [debug] [MainThread]: Command `dbt init` succeeded at 16:14:37.426541 after 5.50 seconds
+[0m16:14:37.427383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097537d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109751b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109753a10>]}
+[0m16:14:37.428019 [debug] [MainThread]: Flushing usage events
+[0m16:14:37.927583 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:21:10.737879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10703a950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107050b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070517d0>]}
+
+
+============================== 16:21:10.740860 | 68d3a054-b8a2-4e7d-b457-848fa84e5944 ==============================
+[0m16:21:10.740860 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:21:10.741244 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug --project-dir dbt', 'use_experimental_parser': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'write_json': 'True', 'partial_parse': 'True', 'log_format': 'default', 'printer_width': '80', 'log_path': 'logs', 'quiet': 'False', 'introspect': 'True', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'profiles_dir': '/Users/darrendavy/.dbt'}
+[0m16:21:10.750711 [info ] [MainThread]: dbt version: 1.12.5
+[0m16:21:10.750970 [info ] [MainThread]: python version: 3.11.0
+[0m16:21:10.751150 [info ] [MainThread]: python path: /Users/darrendavy/projects/uk-rail-data-platform/.venv/bin/python3
+[0m16:21:10.751305 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit
+[0m16:21:10.751680 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:21:10.753256 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 440, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:21:10.755514 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.041769374, "process_in_blocks": "0", "process_kernel_time": 0.148347, "process_mem_max_rss": "113770496", "process_out_blocks": "0", "process_user_time": 0.671943}
+[0m16:21:10.755777 [debug] [MainThread]: Command `dbt debug` failed at 16:21:10.755729 after 0.04 seconds
+[0m16:21:10.755991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10703d050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10703ab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10702fa10>]}
+[0m16:21:10.756191 [debug] [MainThread]: Flushing usage events
+[0m16:21:11.327919 [debug] [MainThread]: An error was encountered while trying to flush usage events
+16:21:34.759801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096fbb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109710a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097116d0>]}
+
+
+============================== 16:21:34.762724 | e5117b56-7ae5-4bb0-9e6b-27cf70a1034b ==============================
+16:21:34.762724 [info ] [MainThread]: Running with dbt=1.12.5
+16:21:34.763081 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'use_colors': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'None', 'invocation_command': 'dbt debug --project-dir dbt --no-use-colors', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'log_path': 'logs', 'printer_width': '80', 'warn_error': 'None', 'static_parser': 'True', 'profiles_dir': '/Users/darrendavy/.dbt', 'write_json': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'debug': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'target_path': 'None', 'partial_parse': 'True'}
+16:21:34.771808 [info ] [MainThread]: dbt version: 1.12.5
+16:21:34.772066 [info ] [MainThread]: python version: 3.11.0
+16:21:34.772254 [info ] [MainThread]: python path: /Users/darrendavy/projects/uk-rail-data-platform/.venv/bin/python3
+16:21:34.772709 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit
+16:21:34.773456 [error] [MainThread]: [ERROR]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+16:21:34.775179 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 440, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+16:21:34.777636 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.03398325, "process_in_blocks": "0", "process_kernel_time": 0.149433, "process_mem_max_rss": "113819648", "process_out_blocks": "0", "process_user_time": 0.67563}
+16:21:34.777982 [debug] [MainThread]: Command `dbt debug` failed at 16:21:34.777933 after 0.03 seconds
+16:21:34.778197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109626090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109723dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096fb4d0>]}
+16:21:34.778394 [debug] [MainThread]: Flushing usage events
+16:21:35.193673 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:22:12.129155 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109937d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10994c910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10994d590>]}
+
+
+============================== 16:22:12.132184 | 1d73d3eb-c6d0-482f-b13c-b00b13d41acc ==============================
+[0m16:22:12.132184 [info ] [MainThread]: Running with dbt=1.12.5
+[0m16:22:12.132575 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'log_format': 'default', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'write_json': 'True', 'profiles_dir': '/Users/darrendavy/.dbt', 'empty': 'None', 'hints_enabled': 'True', 'debug': 'False', 'target_path': 'None', 'introspect': 'True', 'static_parser': 'True', 'no_print': 'None', 'log_path': 'logs', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'version_check': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug --project-dir dbt'}
+[0m16:22:12.142066 [info ] [MainThread]: dbt version: 1.12.5
+[0m16:22:12.142338 [info ] [MainThread]: python version: 3.11.0
+[0m16:22:12.142513 [info ] [MainThread]: python path: /Users/darrendavy/projects/uk-rail-data-platform/.venv/bin/python3
+[0m16:22:12.142667 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit
+[0m16:22:12.143034 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+cannot access local variable 'summary_message' where it is not associated with a value
+[0m16:22:12.145004 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 440, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 114, in run
+    load_profile_status: SubtaskStatus = self._load_profile()
+                                         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 201, in _load_profile
+    profile_names, summary_message = self._choose_profile_names()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darrendavy/projects/uk-rail-data-platform/.venv/lib/python3.11/site-packages/dbt/task/debug.py", line 276, in _choose_profile_names
+    return profiles, summary_message
+                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'summary_message' where it is not associated with a value
+
+[0m16:22:12.147884 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.03853479, "process_in_blocks": "0", "process_kernel_time": 0.136695, "process_mem_max_rss": "114196480", "process_out_blocks": "0", "process_user_time": 0.666732}
+[0m16:22:12.148380 [debug] [MainThread]: Command `dbt debug` failed at 16:22:12.148276 after 0.04 seconds
+[0m16:22:12.148658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109938e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10992b790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109937f50>]}
+[0m16:22:12.148923 [debug] [MainThread]: Flushing usage events
+[0m16:22:12.519218 [debug] [MainThread]: An error was encountered while trying to flush usage events

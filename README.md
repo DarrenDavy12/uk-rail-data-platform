@@ -62,6 +62,9 @@ The Python code executed inside Snowflake's environment:
                   Silver
 
 
+- [x] dbt-snowflake is the adapter in virtual environment allows dbt to communicate with Snowflake
+        (dbt isn't replacing Snowflake. dbt is managing your SQL transformations inside Snowflake.)
+
 ### In Progress
 
 - [ ] dbt Silver/Gold models - SQL-based data modelling

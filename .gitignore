@@ -9,3 +9,6 @@ data/raw/*
 data/bronze/*
 !data/raw/.gitkeep
 !data/bronze/.gitkeep
+rail_dbt/target/
+rail_dbt/dbt_packages/
+rail_dbt/logs/
