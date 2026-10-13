@@ -1,6 +1,8 @@
 .env
 .venv/
 __pycache__/
+*.py[cod]
+.pytest_cache/
 .terraform/
 *.tfstate
 *.tfstate.*
@@ -12,3 +14,5 @@ data/bronze/*
 rail_dbt/target/
 rail_dbt/dbt_packages/
 rail_dbt/logs/
+logs/
+.DS_Store

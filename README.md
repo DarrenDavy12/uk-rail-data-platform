@@ -66,8 +66,8 @@ The Python code executed inside Snowflake's environment:
         (dbt isn't replacing Snowflake. dbt is managing your SQL transformations inside Snowflake.)
 
 - [x] dbt Silver/Gold models - SQL-based data modelling
-        (created daily_operator_performance table and new schema for the gold table)
-        
+        (created dbt tests for daily_operator_performance)
+
 ### In Progress
 
 - [ ] Snowflake Tasks - automate the pipeline
