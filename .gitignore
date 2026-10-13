@@ -14,5 +14,5 @@ data/bronze/*
 rail_dbt/target/
 rail_dbt/dbt_packages/
 rail_dbt/logs/
-logs/
+logs
 .DS_Store
