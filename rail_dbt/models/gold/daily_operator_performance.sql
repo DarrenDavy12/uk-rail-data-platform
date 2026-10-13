@@ -1,4 +1,4 @@
--- Using dbt to create GOLD.DAILY_OPERATOR_PERFORMANCE in snowflake 
+-- Using dbt to create GOLD.DAILY_OPERATOR_PERFORMANCE for snowflake 
 
 {{ config(materialized='table') }}
 
@@ -27,7 +27,7 @@ SELECT
 
     MAX(variation_min) AS max_delay_minutes
 
-FROM RAIL_DATA.SILVER.DEPARTURES_SILVER
+FROM {{ source('rail_silver', 'departures_silver') }}
 
 GROUP BY
     service_date,

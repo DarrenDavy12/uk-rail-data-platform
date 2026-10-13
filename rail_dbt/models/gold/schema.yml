@@ -1,0 +1,61 @@
+
+# Must have values for gold records 
+
+# These important Gold columns must always contain values
+
+# Does important data exist?
+
+# Basic dbt test 
+# 7 tests here in total (8 after including business-rule test)
+
+
+# Schema tests = "Is the data shaped correctly?"
+# Check for data that doesnt exist using 'not_null'
+
+version: 2
+
+models:
+  - name: daily_operator_performance
+    description: >
+      Daily summary of rail services grouped by service date and operator.
+      Provides service counts, cancellations, lateness, and average and
+      maximum delay metrics for downstream reporting.
+
+    columns:
+      - name: service_date
+        description: "Date the rail services operated."
+        tests:
+          - not_null
+
+      - name: operator
+        description: "Rail operator responsible for the services."
+        tests:
+          - not_null
+
+      - name: total_services
+        description: "Total number of services for the operator on that date."
+        tests:
+          - not_null
+
+      - name: cancelled_services
+        description: "Number of services marked as cancelled."
+        tests:
+          - not_null
+
+      - name: late_services
+        description: "Number of services with a positive delay."
+        tests:
+          - not_null
+
+      - name: on_time_or_early_services
+        description: "Number of services with zero or negative delay."
+        tests:
+          - not_null
+
+      - name: average_delay_minutes
+        description: "Average variation in minutes across the services."
+        tests:
+          - not_null
+
+      - name: max_delay_minutes
+        description: "Largest variation in minutes for the operator and date."

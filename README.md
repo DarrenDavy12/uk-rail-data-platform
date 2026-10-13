@@ -65,9 +65,11 @@ The Python code executed inside Snowflake's environment:
 - [x] dbt-snowflake is the adapter in virtual environment allows dbt to communicate with Snowflake
         (dbt isn't replacing Snowflake. dbt is managing your SQL transformations inside Snowflake.)
 
+- [x] dbt Silver/Gold models - SQL-based data modelling
+        (created daily_operator_performance table and new schema for the gold table)
+        
 ### In Progress
 
-- [ ] dbt Silver/Gold models - SQL-based data modelling
 - [ ] Snowflake Tasks - automate the pipeline
 - [ ] Power BI - connect to BI -> analysis for downstream consumption 
 

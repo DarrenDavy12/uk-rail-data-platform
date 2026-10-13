@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: rail_silver
+    database: RAIL_DATA
+    schema: SILVER
+    tables:
+      - name: departures_silver
