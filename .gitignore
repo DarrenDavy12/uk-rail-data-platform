@@ -16,3 +16,5 @@ rail_dbt/dbt_packages/
 rail_dbt/logs/
 logs/
 .DS_Store
+docs/project_tracker_notes.txt
+docs/project_diagram.txt
