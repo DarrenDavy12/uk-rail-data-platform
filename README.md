@@ -1,6 +1,6 @@
-## Current Progress
+# UK Rail Data Platform using Python, AWS, Snowflake and DBT
 
-### Completed
+### Documentation
 
 - [x] Python API extraction
 - [x] Raw JSON ingestion
@@ -67,8 +67,6 @@ The Python code executed inside Snowflake's environment:
 
 - [x] dbt Silver/Gold models - SQL-based data modelling
         (created dbt tests for daily_operator_performance)
-
-### In Progress
 
 - [x] Snowflake Tasks - automate the pipeline
 
