@@ -2,31 +2,31 @@
 
 ### Documentation
 
-- [x] Python API extraction
-- [x] Raw JSON ingestion
-- [x] Bronze transformation
-- [x] Bronze Parquet output
-- [x] Bronze data-quality validation
-- [x] Terraform AWS infrastructure
-- [x] AWS S3 bucket
-- [x] AWS IAM authentication - rail-data-platform IAM user → your AWS CLI / boto3 authentication
-- [x] AWS IAM role for Snowflake - rail-snowflake-role IAM role → Snowflake's authentication to S3
-- [x] Local Bronze → S3 upload
-- [x] boto3 S3 upload automation
-- [x] Snowflake database and RAW schema
-- [x] Snowflake RAW table - Snowflake appropriate data types for bronze parquet - light transformations
-- [x] Snowflake storage integration - The clean approach is to use a Snowflake storage integration + AWS IAM role, rather than putting AWS access keys inside Snowflake.
-- [x] Snowflake external stage
-- [x] S3 → Snowflake connectivity verified - Snowflake can see Parquet
-- [x] S3 → Snowflake RAW ingestion - using COPY INTO command to load the Parquet into RAW (Batch 1)
-- [x] Snowpipe - gets new data into Snowflake (automation) -> to detent new files and automatically loads them (Batch 2)
+- Python API extraction
+- Raw JSON ingestion
+- Bronze transformation
+- Bronze Parquet output
+- Bronze data-quality validation
+- Terraform AWS infrastructure
+- AWS S3 bucket
+- AWS IAM authentication - rail-data-platform IAM user → your AWS CLI / boto3 authentication
+- AWS IAM role for Snowflake - rail-snowflake-role IAM role → Snowflake's authentication to S3
+- Local Bronze → S3 upload
+- boto3 S3 upload automation
+- Snowflake database and RAW schema
+- Snowflake RAW table - Snowflake appropriate data types for bronze parquet - light transformations
+- Snowflake storage integration - The clean approach is to use a Snowflake storage integration + AWS IAM role, rather than putting AWS access keys inside Snowflake.
+- Snowflake external stage
+- S3 → Snowflake connectivity verified - Snowflake can see Parquet
+- S3 → Snowflake RAW ingestion - using COPY INTO command to load the Parquet into RAW (Batch 1)
+- Snowpipe - gets new data into Snowflake (automation) -> to detent new files and automatically loads them (Batch 2)
 
             Batch 1 → 5 rows
             Batch 2 → 5 rows
                     ↓
             10 rows in RAW
 
-- [x] Snowflake Streams - identifies what changed -> track changes and only new records coming in from api when extracting:
+- Snowflake Streams - identifies what changed -> track changes and only new records coming in from api when extracting:
 
         Batch 1 → RAW -> 5 rows 
         Batch 2 → RAW -> 10 rows 
@@ -39,7 +39,7 @@
                     ↓
                 detects Batch 3
 
-- [x] Snowpark transformations - Python transformations inside Snowflake
+- Snowpark transformations - Python transformations inside Snowflake
 
         RAW       = 15 rows
         STREAM    = 5 new rows
@@ -62,13 +62,13 @@ The Python code executed inside Snowflake's environment:
                   Silver
 
 
-- [x] dbt-snowflake is the adapter in virtual environment allows dbt to communicate with Snowflake
+- dbt-snowflake is the adapter in virtual environment allows dbt to communicate with Snowflake
         (dbt isn't replacing Snowflake. dbt is managing your SQL transformations inside Snowflake.)
 
-- [x] dbt Silver/Gold models - SQL-based data modelling
+- dbt Silver/Gold models - SQL-based data modelling
         (created dbt tests for daily_operator_performance)
 
-- [x] Snowflake Tasks - automate the pipeline
+- Snowflake Tasks - automate the pipeline
 
 
 ### Architecture
